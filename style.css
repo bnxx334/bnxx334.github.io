@@ -145,15 +145,18 @@ section {
 
 /* Navbar */
 .navbar {
-    background: rgba(13, 13, 13, 0.95);
+    background: rgba(13, 13, 13, 0.98);
     color: var(--text-dark);
     padding: 1rem 0;
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(233, 69, 96, 0.1);
     transition: all 0.3s ease;
 }
@@ -317,6 +320,8 @@ section {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    z-index: 10001;
+    position: relative;
 }
 
 .hamburger span {
@@ -325,6 +330,7 @@ section {
     background: var(--text-light);
     margin: 3px 0;
     transition: 0.3s;
+    border-radius: 2px;
 }
 
 /* Hero Section */
@@ -1143,7 +1149,7 @@ section {
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
-        z-index: 1001;
+        z-index: 10001;
     }
     
     .hamburger.active span:nth-child(1) {
@@ -1163,15 +1169,18 @@ section {
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background: var(--bg-card);
+        background: rgba(13, 13, 13, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         width: 100%;
         text-align: center;
-        transition: 0.3s;
+        transition: left 0.3s ease-in-out;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.5);
-        z-index: 1000;
+        z-index: 10000;
         padding: 20px 0;
         max-height: calc(100vh - 70px);
         overflow-y: auto;
+        border-top: 1px solid rgba(233, 69, 96, 0.2);
     }
     
     .nav-menu.active {
@@ -1180,12 +1189,14 @@ section {
     
     .nav-menu li {
         margin: 0;
+        width: 100%;
     }
     
     .nav-link {
-        padding: 15px;
+        padding: 15px 20px;
         display: block;
         width: 100%;
+        font-size: 1.1rem;
     }
     
     .dropdown-menu {
@@ -1196,6 +1207,12 @@ section {
         box-shadow: none;
         background: rgba(255, 255, 255, 0.05);
         margin-top: 0;
+        padding: 10px 0;
+    }
+    
+    .dropdown-link {
+        padding: 12px 20px;
+        font-size: 1rem;
     }
     
     .nav-item-dropdown:hover .dropdown-menu {
