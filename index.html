@@ -233,22 +233,28 @@
             <h2 class="section-title">Hubungi Saya</h2>
             <p class="contact-subtitle">Punya pertanyaan atau ingin berkolaborasi? Jangan ragu untuk menghubungi saya!</p>
             <div class="contact-content">
-                <form class="contact-form" action="https://formsubmit.co/banyujkt@gmail.com" method="POST">
-                    <!-- Honeypot untuk spam protection -->
-                    <input type="text" name="_honey" style="display:none">
+                <!-- Hidden iframe untuk submit form tanpa redirect -->
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='thanks.html';}"></iframe>
+                
+                <form class="contact-form" action="https://formsubmit.co/banyujkt@gmail.com" method="POST" target="hidden_iframe" id="contactForm">
+                    <!-- Honeypot untuk spam protection (bot akan mengisi ini) -->
+                    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
                     
-                    <!-- Disable captcha -->
+                    <!-- Disable captcha agar langsung submit -->
                     <input type="hidden" name="_captcha" value="false">
-                    
-                    <!-- Redirect setelah submit (ganti dengan URL website Anda) -->
-                    <input type="hidden" name="_next" value="thanks.html">
                     
                     <!-- Subject email -->
                     <input type="hidden" name="_subject" value="Pesan Baru dari Portfolio Website">
                     
+                    <!-- Template email -->
+                    <input type="hidden" name="_template" value="table">
+                    
+                    <!-- Autoresponse untuk pengirim -->
+                    <input type="hidden" name="_autoresponse" value="Terima kasih telah menghubungi saya. Pesan Anda telah diterima dan akan segera saya balas.">
+                    
                     <div class="form-group">
                         <label for="name">Nama Lengkap</label>
-                        <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+                        <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required minlength="3" maxlength="100">
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
@@ -256,9 +262,9 @@
                     </div>
                     <div class="form-group">
                         <label for="message">Pesan</label>
-                        <textarea id="message" name="message" placeholder="Tulis pesan Anda di sini..." rows="5" required></textarea>
+                        <textarea id="message" name="message" placeholder="Tulis pesan Anda di sini..." rows="5" required minlength="10" maxlength="1000"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-submit">
+                    <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
                         <span>Kirim Pesan</span>
                         <span class="btn-icon">→</span>
                     </button>
@@ -327,5 +333,103 @@
     <footer class="footer">
         <p>&copy; 2024 Portfolio. Dibuat dengan ❤️</p>
     </footer>
+
+    <script>
+        // Variable untuk tracking form submission
+        var submitted = false;
+        
+        // Form spam protection dan validasi
+        const contactForm = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        let formSubmitted = false;
+        let formLoadTime = Date.now();
+
+        contactForm.addEventListener('submit', function(e) {
+            // Cek jika form sudah pernah disubmit (prevent double submit)
+            if (formSubmitted) {
+                e.preventDefault();
+                return false;
+            }
+
+            // Cek jika form disubmit terlalu cepat (< 3 detik = kemungkinan bot)
+            const timeSinceLoad = Date.now() - formLoadTime;
+            if (timeSinceLoad < 3000) {
+                e.preventDefault();
+                alert('Mohon tunggu sebentar sebelum mengirim pesan.');
+                return false;
+            }
+
+            // Validasi tambahan
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            // Cek jika ada karakter mencurigakan (spam pattern)
+            const spamPatterns = [
+                /viagra/i,
+                /casino/i,
+                /lottery/i,
+                /\$\$\$/,
+                /click here/i,
+                /http.*http/i, // Multiple URLs
+                /<script/i,
+                /<iframe/i
+            ];
+
+            for (let pattern of spamPatterns) {
+                if (pattern.test(name) || pattern.test(message)) {
+                    e.preventDefault();
+                    alert('Pesan Anda mengandung konten yang tidak diizinkan.');
+                    return false;
+                }
+            }
+
+            // Cek jika nama terlalu pendek atau hanya angka
+            if (name.length < 3 || /^\d+$/.test(name)) {
+                e.preventDefault();
+                alert('Mohon masukkan nama yang valid.');
+                return false;
+            }
+
+            // Validasi email format
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                e.preventDefault();
+                alert('Mohon masukkan email yang valid.');
+                return false;
+            }
+
+            // Cek jika pesan terlalu pendek
+            if (message.length < 10) {
+                e.preventDefault();
+                alert('Pesan terlalu pendek. Minimal 10 karakter.');
+                return false;
+            }
+
+            // Semua validasi passed
+            formSubmitted = true;
+            submitted = true; // Set flag untuk iframe onload
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span>Mengirim...</span>';
+            
+            // Redirect setelah delay singkat untuk memastikan form tersubmit
+            setTimeout(function() {
+                window.location.href = 'thanks.html';
+            }, 1000);
+            
+            // Allow form to submit
+            return true;
+        });
+
+        // Reset form jika user kembali ke halaman
+        window.addEventListener('pageshow', function(event) {
+            if (event.persisted) {
+                formSubmitted = false;
+                submitted = false;
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<span>Kirim Pesan</span><span class="btn-icon">→</span>';
+            }
+        });
+    </script>
 </body>
 </html>
