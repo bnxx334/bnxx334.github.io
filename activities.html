@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities - Banyu Handika</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="activities-style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Portfolio</div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li class="nav-item-dropdown">
+                    <a href="index.html#about" class="nav-link">About</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="activities.html" class="dropdown-link">Activities</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item-dropdown">
+                    <a href="index.html#skills" class="nav-link">Skills</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="certification.html" class="dropdown-link">Certificate</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="activities-page">
+        <!-- Network Elements -->
+        <div class="activities-network-nodes">
+            <div class="activity-node" style="top: 15%; left: 10%;"></div>
+            <div class="activity-node" style="top: 35%; left: 20%;"></div>
+            <div class="activity-node" style="top: 55%; left: 15%;"></div>
+            <div class="activity-node" style="top: 75%; left: 25%;"></div>
+            <div class="activity-node" style="top: 25%; left: 85%;"></div>
+            <div class="activity-node" style="top: 45%; left: 90%;"></div>
+            <div class="activity-node" style="top: 65%; left: 80%;"></div>
+            <div class="activity-node" style="top: 85%; left: 88%;"></div>
+            <div class="data-flow" style="left: 15%; animation-delay: 0s;"></div>
+            <div class="data-flow" style="left: 35%; animation-delay: 1s;"></div>
+            <div class="data-flow" style="left: 55%; animation-delay: 2s;"></div>
+            <div class="data-flow" style="left: 75%; animation-delay: 1.5s;"></div>
+            <div class="data-flow" style="left: 85%; animation-delay: 0.5s;"></div>
+        </div>
+
+        <div class="activities-header">
+            <h1>Aktivitas & Pengalaman</h1>
+            <p>Kegiatan organisasi, kompetisi, dan pengalaman profesional</p>
+            
+            <div class="activities-stats">
+                <div class="stat-item">
+                    <span class="stat-number" id="totalActivities">3</span>
+                    <span class="stat-label">Total Activities</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">2</span>
+                    <span class="stat-label">Organizations</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">2025</span>
+                    <span class="stat-label">Latest Year</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="activities-controls">
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="Cari aktivitas...">
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="organization">Organisasi</button>
+                <button class="filter-btn" data-filter="competition">Kompetisi</button>
+                <button class="filter-btn" data-filter="project">Project</button>
+            </div>
+        </div>
+
+        <div class="activities-container">
+            <div class="activities-grid" id="activitiesGrid">
+                
+                <!-- Activity 1 -->
+                <div class="activity-card" data-category="organization" data-name="Koordinator Humas dan IT OSIS">
+                    <div class="activity-icon">👥</div>
+                    <div class="activity-body">
+                        <div class="activity-badge organization">Organization</div>
+                        <h3 class="activity-title">Koordinator Humas dan IT OSIS</h3>
+                        <div class="activity-org">OSIS SMK</div>
+                        <div class="activity-date">2024 - 2025</div>
+                        <div class="activity-tags">
+                            <span class="activity-tag">Leadership</span>
+                            <span class="activity-tag">IT Management</span>
+                            <span class="activity-tag">Communication</span>
+                        </div>
+                        <p class="activity-desc">Memimpin divisi Humas dan IT dalam mengelola komunikasi sekolah dan infrastruktur teknologi informasi untuk kegiatan OSIS.</p>
+                    </div>
+                </div>
+
+                <!-- Activity 2 -->
+                <div class="activity-card" data-category="competition" data-name="LKS Network Administrator">
+                    <div class="activity-icon">🏆</div>
+                    <div class="activity-body">
+                        <div class="activity-badge competition">Competition</div>
+                        <h3 class="activity-title">LKS Network Administrator</h3>
+                        <div class="activity-org">Lomba Kompetensi Siswa</div>
+                        <div class="activity-date">2024</div>
+                        <div class="activity-tags">
+                            <span class="activity-tag">Networking</span>
+                            <span class="activity-tag">Competition</span>
+                            <span class="activity-tag">Technical</span>
+                        </div>
+                        <p class="activity-desc">Mengikuti kompetisi Network Administrator tingkat sekolah, menguji kemampuan dalam konfigurasi jaringan dan troubleshooting.</p>
+                    </div>
+                </div>
+
+                <!-- Activity 3 -->
+                <div class="activity-card" data-category="project" data-name="Lab Network Setup">
+                    <div class="activity-icon">🔧</div>
+                    <div class="activity-body">
+                        <div class="activity-badge project">Project</div>
+                        <h3 class="activity-title">Lab Network Setup</h3>
+                        <div class="activity-org">Personal Project</div>
+                        <div class="activity-date">2024 - Present</div>
+                        <div class="activity-tags">
+                            <span class="activity-tag">MikroTik</span>
+                            <span class="activity-tag">Lab</span>
+                            <span class="activity-tag">Hands-on</span>
+                        </div>
+                        <p class="activity-desc">Membangun dan mengelola lab jaringan pribadi untuk eksperimen berbagai topologi dan konfigurasi networking menggunakan MikroTik.</p>
+                    </div>
+                </div>
+
+                <!-- Activites 3 - Internship -->
+                <div class="activity-card" data-category="internship" data-name="GMEDIA internship">
+                    <div class="activity-icon">👥</div>
+                    <div class="activity-body">
+                        <div class="activity-badge internship">Internship</div>
+                        <h3 class="activity-title">Internship at PT. GMEDIA</h3>
+                        <div class="activity-org">Internship</div>
+                        <div class="activity-date">July 2025 - December 2025</div>
+                        <div class="activity-tags">
+                            <span class="activity-tag">Internship</span>
+                            <span class="activity-tag">Hands-on</span>
+                            <span class="activity-tag">Network Technician</span>
+                        </div>
+                        <p class="activity-desc">Magang di PT. Media Sarana Data, Divisi <i>Network Operations (NetOps)</i> </p>
+                    </div>
+                </div>
+
+                <!-- Activites 4 - Lomba NETCOMP -->
+                <div class="activity-card" data-category="competition" data-name="Lomba Nasional Networking">
+                    <div class="activity-icon">🏆</div>
+                    <div class="activity-body">
+                        <div class="activity-badge competition">Semi-Final</div>
+                        <h3 class="activity-title">NetComp 4.0</h3>
+                        <div class="activity-org">Lomba Nasional</div>
+                        <div class="activity-date">November 2025 - February 2026</div>
+                        <div class="activity-tags">
+                            <span class="activity-tag">NETCOMP 4.0</span>
+                            <span class="activity-tag">Uneversitas Gadjah Mada</span>
+                            <span class="activity-tag">Kompetisi Nasional</span>
+                        </div>
+                        <p class="activity-desc">Mengikuti perlombaan Nasional Technology NETCOMP 4.0 yang diselenggarakan oleh Universitas Gadjah Mada</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="no-results" id="noResults">
+                <div class="no-results-icon">🔍</div>
+                <h3>Tidak ada aktivitas ditemukan</h3>
+                <p>Coba kata kunci atau filter lain</p>
+            </div>
+
+            <div class="back-section">
+                <a href="index.html" class="back-btn">
+                    ← Kembali ke Home
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Portfolio Banyu Handika. Dibuat dengan ❤️</p>
+    </footer>
+
+    <script src="activities-script.js"></script>
+</body>
+</html>

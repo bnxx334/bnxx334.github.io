@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sertifikat - Banyu Handika</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cert-style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Portfolio</div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li class="nav-item-dropdown">
+                    <a href="index.html#about" class="nav-link">About</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="activities.html" class="dropdown-link">Activities</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item-dropdown">
+                    <a href="index.html#skills" class="nav-link">Skills</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="certification.html" class="dropdown-link">Certificate</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="cert-page">
+        <!-- Network Elements -->
+        <div class="cert-network-nodes">
+            <div class="cert-node" style="top: 15%; left: 10%;"></div>
+            <div class="cert-node" style="top: 35%; left: 20%;"></div>
+            <div class="cert-node" style="top: 55%; left: 15%;"></div>
+            <div class="cert-node" style="top: 75%; left: 25%;"></div>
+            <div class="cert-node" style="top: 25%; left: 85%;"></div>
+            <div class="cert-node" style="top: 45%; left: 90%;"></div>
+            <div class="cert-node" style="top: 65%; left: 80%;"></div>
+            <div class="cert-node" style="top: 85%; left: 88%;"></div>
+            <div class="data-flow" style="left: 10%; animation-delay: 0s;"></div>
+            <div class="data-flow" style="left: 30%; animation-delay: 1s;"></div>
+            <div class="data-flow" style="left: 50%; animation-delay: 2s;"></div>
+            <div class="data-flow" style="left: 70%; animation-delay: 1.5s;"></div>
+            <div class="data-flow" style="left: 90%; animation-delay: 0.5s;"></div>
+        </div>
+
+        <div class="cert-header">
+            <h1>Sertifikat Profesional</h1>
+            <p>Koleksi sertifikasi dan pencapaian dalam bidang networking dan teknologi</p>
+            
+            <div class="cert-stats">
+                <div class="stat-item">
+                    <span class="stat-number" id="totalCerts">8</span>
+                    <span class="stat-label">Total Sertifikat</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">8</span>
+                    <span class="stat-label">Verified</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">2026</span>
+                    <span class="stat-label">Latest Year</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-controls">
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="Cari sertifikat...">
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="mikrotik">MikroTik</button>
+                <button class="filter-btn" data-filter="networking">Networking</button>
+                <button class="filter-btn" data-filter="verified">Verified</button>
+            </div>
+        </div>
+
+        <div class="cert-container">
+            <div class="cert-grid" id="certGrid">
+                
+                <!-- MTCNA -->
+                <div class="cert-card" data-category="mikrotik networking" data-name="MikroTik Certified Network Associate">
+                    <div class="cert-preview">
+                        <iframe src="Asset/sertif/mtcna.pdf#toolbar=0&navpanes=0&scrollbar=0"></iframe>
+                        <div class="cert-overlay"></div>
+                        <span class="cert-badge verified">Verified</span>
+                    </div>
+                    <div class="cert-body">
+                        <h3 class="cert-title">MikroTik Certified Network Associate</h3>
+                        <div class="cert-issuer">MikroTik</div>
+                        <div class="cert-date">Issued: December 2025</div>
+                        <div class="cert-tags">
+                            <span class="cert-tag">Networking</span>
+                            <span class="cert-tag">Routing</span>
+                            <span class="cert-tag">Firewall</span>
+                        </div>
+                        <p class="cert-desc">Sertifikasi dasar MikroTik yang mencakup routing, wireless, firewall, dan network management.</p>
+                        <div class="cert-actions">
+                            <a href="Asset/sertif/mtcna.pdf" class="cert-btn cert-btn-primary" target="_blank">
+                                Lihat
+                            </a>
+                            <a href="Asset/sertif/mtcna.pdf" class="cert-btn cert-btn-secondary" download>
+                                Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MTCRE -->
+                <div class="cert-card" data-category="mikrotik networking" data-name="MikroTik Certified Routing Engineer">
+                    <div class="cert-preview">
+                        <img src="Asset/sertif/mtcre.jpg" alt="MTCRE Certificate">
+                        <div class="cert-overlay"></div>
+                        <span class="cert-badge verified">Verified</span>
+                    </div>
+                    <div class="cert-body">
+                        <h3 class="cert-title">MikroTik Certified Routing Engineer</h3>
+                        <div class="cert-issuer">MikroTik</div>
+                        <div class="cert-date">Issued: December 2025</div>
+                        <div class="cert-tags">
+                            <span class="cert-tag">Advanced</span>
+                            <span class="cert-tag">OSPF</span>
+                            <span class="cert-tag">BGP</span>
+                        </div>
+                        <p class="cert-desc">Sertifikasi advanced untuk routing protocols, OSPF, BGP, dan network optimization.</p>
+                        <div class="cert-actions">
+                            <a href="Asset/sertif/mtcre.jpg" class="cert-btn cert-btn-primary" target="_blank">
+                                Lihat
+                            </a>
+                            <a href="Asset/sertif/mtcre.jpg" class="cert-btn cert-btn-secondary" download>
+                                Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dasar Linux -->
+                <div class="cert-card" data-category="linux networking" data-name="Linux">
+                    <div class="cert-preview">
+                        <iframe src="Asset/sertif/BANYU-HANDIKA-Belajar-Linux-dari-Nol-Sertifikat-Belajar-Linux-dari-Nol-LMS-ID-Networkers.pdf"></iframe>
+                        <div class="cert-overlay"></div>
+                        <span class="cert-badge verified">Verified</span>
+                    </div>
+                    <div class="cert-body">
+                        <h3 class="cert-title">Course Linux OS</h3>
+                        <div class="cert-issuer">IDN Networkers</div>
+                        <div class="cert-date">Issued: January 2026</div>
+                        <div class="cert-tags">
+                            <span class="cert-tag">Operating System</span>
+                            <span class="cert-tag">Networking</span>
+                            <!-- <span class="cert-tag"></span> -->
+                        </div>
+                        <p class="cert-desc">Sertifikasi <i>Course</i> dasar Sistem Operasi Linux</p>
+                        <div class="cert-actions">
+                            <a href="Asset/sertif/BANYU-HANDIKA-Belajar-Linux-dari-Nol-Sertifikat-Belajar-Linux-dari-Nol-LMS-ID-Networkers.pdf" class="cert-btn cert-btn-primary" target="_blank">
+                                Lihat
+                            </a>
+                            <a href="Asset/sertif/BANYU-HANDIKA-Belajar-Linux-dari-Nol-Sertifikat-Belajar-Linux-dari-Nol-LMS-ID-Networkers.pdf" class="cert-btn cert-btn-secondary" download>
+                                Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sertifikat MikroTik Dasar -->
+                <div class="cert-card" data-category="mikrotik networking" data-name="Mikrotik Dasar">
+                    <div class="cert-preview">
+                        <iframe src="Asset/sertif/BANYU-HANDIKA-Mikrotik-Dasar-Sertifikat-Mikrotik-Dasar-LMS-ID-Networkers.pdf"></iframe>
+                        <div class="cert-overlay"></div>
+                        <span class="cert-badge verified">Verified</span>
+                    </div>
+                    <div class="cert-body">
+                        <h3 class="cert-title">Course MikroTik Dasar</h3>
+                        <div class="cert-issuer">IDN Networkers</div>
+                        <div class="cert-date">Issued: January 2026</div>
+                        <div class="cert-tags">
+                            <span class="cert-tag">MikroTik RouterOS</span>
+                            <span class="cert-tag">Networking</span>
+                            <!-- <span class="cert-tag"></span> -->
+                        </div>
+                        <p class="cert-desc">Sertifikasi <i>Course</i> dasar MikroTik <i>RouterOS</i></p>
+                        <div class="cert-actions">
+                            <a href="Asset/sertif/BANYU-HANDIKA-Mikrotik-Dasar-Sertifikat-Mikrotik-Dasar-LMS-ID-Networkers.pdf" class="cert-btn cert-btn-primary" target="_blank">
+                                Lihat
+                            </a>
+                            <a href="Asset/sertif/BANYU-HANDIKA-Mikrotik-Dasar-Sertifikat-Mikrotik-Dasar-LMS-ID-Networkers.pdf" class="cert-btn cert-btn-secondary" download>
+                                Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  -->
+                <div class="cert-card" data-category="network networking" data-name="Network Fundamental">
+                    <div class="cert-preview">
+                        <iframe src="Asset/sertif/BANYU-HANDIKA-Jaringan-Dasar-Sertifikat-Jaringan-Komputer-Dasar-LMS-ID-Networkers.pdf"></iframe>
+                        <div class="cert-overlay"></div>
+                        <span class="cert-badge verified">Verified</span>
+                    </div>
+                    <div class="cert-body">
+                        <h3 class="cert-title">Course Network Fundamental</h3>
+                        <div class="cert-issuer">IDN Networkers</div>
+                        <div class="cert-date">Issued: January 2026</div>
+                        <div class="cert-tags">
+                            <span class="cert-tag">TCP/IP</span>
+                            <span class="cert-tag">Networking</span>
+                            <span class="cert-tag">OSI Layer</span>
+                        </div>
+                        <p class="cert-desc">Sertifikasi <i>Course</i> dasar Jaringan Komputer </p>
+                        <div class="cert-actions">
+                            <a href="Asset/sertif/BANYU-HANDIKA-Jaringan-Dasar-Sertifikat-Jaringan-Komputer-Dasar-LMS-ID-Networkers.pdf"" class="cert-btn cert-btn-primary" target="_blank">
+                                Lihat
+                            </a>
+                            <a href="Asset/sertif/BANYU-HANDIKA-Jaringan-Dasar-Sertifikat-Jaringan-Komputer-Dasar-LMS-ID-Networkers.pdf" class="cert-btn cert-btn-secondary" download>
+                                Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PNET LAB -->
+                <div class="cert-card" data-category="pnet simulation networking" data-name="PNet LAB">
+                    <div class="cert-preview">
+                        <iframe src="Asset/sertif/BANYU-HANDIKA-Simulasi-Jaringan-dengan-PNETlab-Sertifikat-Belajar-simulasi-jaringan-dengan-pnetlab-LMS-ID-Networkers.pdf"></iframe>
+                        <div class="cert-overlay"></div>
+                        <span class="cert-badge verified">Verified</span>
+                    </div>
+                    <div class="cert-body">
+                        <h3 class="cert-title">Course PNet Lab Operating</h3>
+                        <div class="cert-issuer">IDN Networkers</div>
+                        <div class="cert-date">Issued: January 2026</div>
+                        <div class="cert-tags">
+                            <span class="cert-tag">Simulation</span>
+                            <span class="cert-tag">Networking</span>
+                            <span class="cert-tag">Lab</span>
+                        </div>
+                        <p class="cert-desc">Sertifikasi <i>Course</i> dasar Operating PNet LAB</p>
+                        <div class="cert-actions">
+                            <a href="Asset/sertif/BANYU-HANDIKA-Simulasi-Jaringan-dengan-PNETlab-Sertifikat-Belajar-simulasi-jaringan-dengan-pnetlab-LMS-ID-Networkers.pdf" class="cert-btn cert-btn-primary" target="_blank">
+                                Lihat
+                            </a>
+                            <a href="Asset/sertif/BANYU-HANDIKA-Simulasi-Jaringan-dengan-PNETlab-Sertifikat-Belajar-simulasi-jaringan-dengan-pnetlab-LMS-ID-Networkers.pdf" class="cert-btn cert-btn-secondary" download>
+                                Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cisco Dasar -->
+                 <div class="cert-card" data-category="cisco networking" data-name="Cisco Dasar">
+                    <div class="cert-preview">
+                        <iframe src="Asset/sertif/BANYU-HANDIKA-Cisco-Dasar-Sertifikat-Cisco-Dasar-LMS-ID-Networkers.pdf"></iframe>
+                        <div class="cert-overlay"></div>
+                        <span class="cert-badge verified">Verified</span>
+                    </div>
+                    <div class="cert-body">
+                        <h3 class="cert-title">Course Cisco Dasar</h3>
+                        <div class="cert-issuer">IDN Networkers</div>
+                        <div class="cert-date">Issued: January 2026</div>
+                        <div class="cert-tags">
+                            <span class="cert-tag">Cisco</span>
+                            <span class="cert-tag">Networking</span>
+                            <!-- <span class="cert-tag"></span> -->
+                        </div>
+                        <p class="cert-desc">Sertifikasi <i>Course</i> dasar Operating PNet LAB</p>
+                        <div class="cert-actions">
+                            <a href="Asset/sertif/BANYU-HANDIKA-Cisco-Dasar-Sertifikat-Cisco-Dasar-LMS-ID-Networkers.pdf" class="cert-btn cert-btn-primary" target="_blank">
+                                Lihat
+                            </a>
+                            <a href="Asset/sertif/BANYU-HANDIKA-Cisco-Dasar-Sertifikat-Cisco-Dasar-LMS-ID-Networkers.pdf" class="cert-btn cert-btn-secondary" download>
+                                Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OSIS SEK 8 -->
+                 <div class="cert-card" data-category="organization sekbid8" data-name="KOOR SEKBID 8">
+                    <div class="cert-preview">
+                        <iframe src="Asset/sertif/Sertifikat OSIS KOOR Humas & IT.pdf"></iframe>
+                        <div class="cert-overlay"></div>
+                        <span class="cert-badge verified">Verified</span>
+                    </div>
+                    <div class="cert-body">
+                        <h3 class="cert-title">Koordinator Seksi Bidang IT & Humas</h3>
+                        <div class="cert-issuer">SMK Prestasi Prima</div>
+                        <div class="cert-date">Issued: January 2026</div>
+                        <div class="cert-tags">
+                            <span class="cert-tag">Organization</span>
+                            <span class="cert-tag">OSIS</span>
+                            <!-- <span class="cert-tag"></span> -->
+                        </div>
+                        <p class="cert-desc">Sertifikat Penghargaan Keanggotaan OSIS SMK Prestasi Prima periode 2024-2025</p>
+                        <div class="cert-actions">
+                            <a href="Asset/sertif/Sertifikat OSIS KOOR Humas & IT.pdf" class="cert-btn cert-btn-primary" target="_blank">
+                                Lihat
+                            </a>
+                            <a href="Asset/sertif/Sertifikat OSIS KOOR Humas & IT.pdf" class="cert-btn cert-btn-secondary" download>
+                                Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="no-results" id="noResults">
+                <div class="no-results-icon">🔍</div>
+                <h3>Tidak ada sertifikat ditemukan</h3>
+                <p>Coba kata kunci atau filter lain</p>
+            </div>
+
+            <div class="back-section">
+                <a href="index.html" class="back-btn">
+                    ← Kembali ke Home
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Portfolio Banyu Handika. Dibuat dengan ❤️</p>
+    </footer>
+
+    <script src="cert-script.js"></script>
+</body>
+</html>
