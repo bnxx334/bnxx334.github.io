@@ -1,0 +1,24 @@
+name: Main Config
+version: 1.0.0
+schema: v1
+
+models:
+  - name: Qwen Coder Local
+    provider: ollama
+    model: qwen2.5-coder:1.5b
+    roles:
+      - chat
+      - edit
+      - apply
+
+  - name: Qwen Autocomplete
+    provider: ollama
+    model: qwen2.5-coder:0.5b
+    roles:
+      - autocomplete
+
+  - name: Nomic Embed
+    provider: ollama
+    model: nomic-embed-text:latest
+    roles:
+      - embed
