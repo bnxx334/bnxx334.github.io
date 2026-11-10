@@ -1,15 +1,16 @@
-const CACHE_NAME = 'portfolio-v1';
+const CACHE_NAME = 'portfolio-v2';
 const ASSETS_TO_CACHE = [
-    '/',
-    '/index.html',
-    '/style.css',
-    '/mobile-menu.js',
-    '/Asset/IMG_0853.JPG.jpeg',
-    '/Asset/Resume_Banyu_Handika_TJKT.pdf'
+    './',
+    './index.html',
+    './style.css',
+    './mobile-menu.js',
+    './Asset/IMG_0853.JPG.jpeg',
+    './Asset/Resume_Banyu_Handika_TJKT.pdf'
 ];
 
 // Install Service Worker & Cache Assets
 self.addEventListener('install', (e) => {
+    self.skipWaiting();
     e.waitUntil(
         caches.open(CACHE_NAME).then((cache) => {
             return cache.addAll(ASSETS_TO_CACHE);
@@ -17,12 +18,17 @@ self.addEventListener('install', (e) => {
     );
 });
 
-// Fetch Assets from Cache first, then Network
+// Network first, fallback to cache
 self.addEventListener('fetch', (e) => {
+    if (e.request.method !== 'GET') return;
     e.respondWith(
-        caches.match(e.request).then((response) => {
-            return response || fetch(e.request);
-        })
+        fetch(e.request)
+            .then((response) => {
+                const copy = response.clone();
+                caches.open(CACHE_NAME).then((cache) => cache.put(e.request, copy));
+                return response;
+            })
+            .catch(() => caches.match(e.request))
     );
 });
 
@@ -35,6 +41,6 @@ self.addEventListener('activate', (e) => {
                     return caches.delete(key);
                 }
             }));
-        })
+        }).then(() => self.clients.claim())
     );
 });

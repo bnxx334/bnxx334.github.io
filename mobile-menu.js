@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
             navMenu.classList.toggle('active');
             hamburger.classList.toggle('active');
         });
-        
+
         // Close menu when clicking on a link
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', function() {
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 hamburger.classList.remove('active');
             });
         });
-        
+
         // Close menu when clicking outside
         document.addEventListener('click', function(event) {
             if (!event.target.closest('.nav-container')) {
@@ -28,31 +28,34 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- Safe Lazy Load / Fade In Animation Logic ---
-    // Hanya jalankan jika browser mendukung IntersectionObserver
-    if ('IntersectionObserver' in window) {
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
+    const sectionsToAnimate = document.querySelectorAll('section:not(#home)');
 
+    const show = (el) => el.classList.add('is-visible');
+
+    if ('IntersectionObserver' in window) {
         const observer = new IntersectionObserver((entries, obs) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
+                    show(entry.target);
                     obs.unobserve(entry.target);
                 }
             });
-        }, observerOptions);
+        }, { root: null, rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
 
-        // Target semua section kecuali hero
-        const sectionsToAnimate = document.querySelectorAll('section:not(#home)');
         sectionsToAnimate.forEach(section => {
-            // Tambahkan class fade-in-section (yang mengatur opacity:0 di CSS)
             section.classList.add('fade-in-section');
-            observer.observe(section);
+            const rect = section.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                show(section);
+            } else {
+                observer.observe(section);
+            }
         });
+
+        // Fallback: pastikan konten tampil jika observer tidak terpanggil
+        setTimeout(() => {
+            sectionsToAnimate.forEach(show);
+        }, 1500);
     }
-    // Jika browser tidak support IntersectionObserver, 
-    // section tetap visible karena default CSS opacity: 1
+    // Jika browser tidak support IntersectionObserver, section tetap visible (default CSS)
 });
