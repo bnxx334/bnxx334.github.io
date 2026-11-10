@@ -279,7 +279,7 @@ section {
 
 .dropdown-link {
     display: block;
-    padding: 0.8rem 1.5rem;
+    padding: 0.8rem 1.5rem 0.8rem 2.2rem;
     color: var(--text-dark);
     text-decoration: none;
     transition: all 0.3s;
@@ -291,21 +291,23 @@ section {
 .dropdown-link::before {
     content: '→';
     position: absolute;
-    left: 1rem;
+    left: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
     opacity: 0;
-    transition: all 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
     color: var(--highlight-color);
+    line-height: 1;
 }
 
 .dropdown-link:hover {
     background: rgba(233, 69, 96, 0.1);
     color: var(--highlight-color);
-    padding-left: 2.5rem;
 }
 
 .dropdown-link:hover::before {
     opacity: 1;
-    left: 1.5rem;
+    transform: translateY(-50%) translateX(2px);
 }
 
 .hamburger {
