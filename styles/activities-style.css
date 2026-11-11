@@ -8,6 +8,21 @@
         linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
 }
 
+.activities-controls {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.activities-controls .search-box {
+    width: min(100%, 480px);
+    flex: 0 1 auto;
+    margin-inline: auto;
+}
+
+.activities-controls .filter-buttons {
+    justify-content: center;
+}
+
 .activities-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));

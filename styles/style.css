@@ -134,7 +134,7 @@ textarea:focus-visible {
 
 .dropdown-menu {
     position: absolute;
-    top: calc(100% + 0.4rem);
+    top: calc(100% - 1px);
     left: 0;
     z-index: 2;
     min-width: 180px;
@@ -163,6 +163,10 @@ textarea:focus-visible {
     padding: 0.65rem 0.75rem;
     border-radius: 8px;
     font-size: 0.88rem;
+}
+
+.dropdown-toggle {
+    display: none;
 }
 
 .hamburger {
@@ -1160,8 +1164,44 @@ section {
         text-align: left;
     }
 
+    .nav-item-dropdown {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 44px;
+        align-items: center;
+    }
+
+    .nav-item-dropdown > .nav-link {
+        grid-column: 1;
+    }
+
+    .dropdown-toggle {
+        display: flex;
+        width: 40px;
+        height: 40px;
+        grid-column: 2;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--color-border);
+        border-radius: 9px;
+        background: #fff;
+        color: #334155;
+        cursor: pointer;
+    }
+
+    .dropdown-toggle span {
+        font-size: 1.15rem;
+        line-height: 1;
+        transition: transform 160ms ease;
+    }
+
+    .nav-item-dropdown.submenu-open .dropdown-toggle span {
+        transform: rotate(180deg);
+    }
+
     .dropdown-menu {
         position: static;
+        display: none;
+        grid-column: 1 / -1;
         min-width: 0;
         margin: 0 0 0.3rem 0.65rem;
         padding: 0 0 0 0.55rem;
@@ -1175,6 +1215,10 @@ section {
         transform: none;
         visibility: visible;
         transition: none;
+    }
+
+    .nav-item-dropdown.submenu-open .dropdown-menu {
+        display: block;
     }
 
     .dropdown-link {
