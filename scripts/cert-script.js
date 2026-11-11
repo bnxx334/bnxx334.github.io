@@ -11,21 +11,27 @@ filterBtns.forEach(btn => {
     btn.addEventListener('click', function() {
         filterBtns.forEach(b => b.classList.remove('active'));
         this.classList.add('active');
+        filterBtns.forEach(button => {
+            button.setAttribute('aria-pressed', String(button === this));
+        });
         currentFilter = this.dataset.filter;
         filterCertificates();
     });
 });
 
 function filterCertificates() {
-    const searchTerm = searchInput.value.toLowerCase();
+    const searchTerm = searchInput.value.trim().toLowerCase();
     let visibleCount = 0;
 
     certCards.forEach(card => {
-        const name = card.dataset.name.toLowerCase();
-        const category = card.dataset.category;
+        const searchableText = card.textContent.toLowerCase();
+        const categories = card.dataset.category.split(/\s+/);
         
-        const matchesSearch = name.includes(searchTerm);
-        const matchesFilter = currentFilter === 'all' || category.includes(currentFilter);
+        const matchesSearch = searchableText.includes(searchTerm);
+        const matchesFilter = currentFilter === 'all'
+            || (currentFilter === 'verified'
+                ? card.querySelector('.cert-badge.verified') !== null
+                : categories.includes(currentFilter));
 
         if (matchesSearch && matchesFilter) {
             card.classList.remove('hidden');

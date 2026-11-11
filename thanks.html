@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terima Kasih - Banyu Handika</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
     <style>
         .navbar {
             position: fixed;
@@ -20,17 +20,19 @@
             align-items: center;
             justify-content: center;
             padding: 20px;
-            background: var(--bg-dark);
+            background:
+                radial-gradient(circle at 85% 15%, rgba(37, 99, 235, 0.12), transparent 28%),
+                linear-gradient(135deg, #f8fafc 0%, #f1f5f9 58%, #eaf2ff 100%);
         }
 
         .thanks-container {
             text-align: center;
             max-width: 600px;
-            background: var(--bg-card);
+            background: rgba(255, 255, 255, 0.94);
             padding: 4rem 3rem;
-            border-radius: 20px;
+            border-radius: 24px;
             box-shadow: var(--shadow-hover);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid #e2e8f0;
         }
 
         .thanks-icon {
@@ -75,29 +77,29 @@
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">Portfolio</div>
-            <ul class="nav-menu">
-                <li><a href="index.html#home" class="nav-link">Home</a></li>
+            <div class="logo">BANYU HANDIKA</div>
+            <ul class="nav-menu" id="primary-navigation">
+                <li><a href="index.html#home" class="nav-link">Beranda</a></li>
                 <li class="nav-item-dropdown">
-                    <a href="index.html#about" class="nav-link">About</a>
+                    <a href="index.html#about" class="nav-link">Tentang</a>
                     <ul class="dropdown-menu">
-                        <li><a href="activities.html" class="dropdown-link">Activities</a></li>
+                        <li><a href="activities.html" class="dropdown-link">Aktivitas</a></li>
                     </ul>
                 </li>
                 <li class="nav-item-dropdown">
-                    <a href="index.html#skills" class="nav-link">Skills</a>
+                    <a href="index.html#skills" class="nav-link">Keahlian</a>
                     <ul class="dropdown-menu">
-                        <li><a href="certification.html" class="dropdown-link">Certificate</a></li>
+                        <li><a href="certification.html" class="dropdown-link">Sertifikat</a></li>
                     </ul>
                 </li>
-                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
-                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="index.html#projects" class="nav-link">Proyek</a></li>
+                <li><a href="index.html#contact" class="nav-link">Kontak</a></li>
             </ul>
-            <div class="hamburger">
+            <button class="hamburger" type="button" aria-label="Buka navigasi" aria-expanded="false" aria-controls="primary-navigation">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
@@ -107,7 +109,7 @@
             <h1>Pesan Terkirim!</h1>
             <p>Terima kasih telah menghubungi saya. Pesan Anda telah berhasil dikirim dan akan saya balas sesegera mungkin.</p>
             <div class="thanks-buttons">
-                <a href="index.html" class="btn btn-primary">Kembali ke Home</a>
+                <a href="index.html" class="btn btn-primary">Kembali ke Beranda</a>
                 <a href="index.html#contact" class="btn btn-secondary">Kirim Pesan Lagi</a>
             </div>
             <p class="countdown">Anda akan diarahkan ke halaman utama dalam <span id="timer">5</span> detik...</p>
@@ -128,5 +130,6 @@
             }
         }, 1000);
     </script>
+    <script type="module" src="./src/main.jsx"></script>
 </body>
 </html>

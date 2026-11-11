@@ -11,20 +11,23 @@ filterBtns.forEach(btn => {
     btn.addEventListener('click', function() {
         filterBtns.forEach(b => b.classList.remove('active'));
         this.classList.add('active');
+        filterBtns.forEach(button => {
+            button.setAttribute('aria-pressed', String(button === this));
+        });
         currentFilter = this.dataset.filter;
         filterActivities();
     });
 });
 
 function filterActivities() {
-    const searchTerm = searchInput.value.toLowerCase();
+    const searchTerm = searchInput.value.trim().toLowerCase();
     let visibleCount = 0;
 
     activityCards.forEach(card => {
-        const name = card.dataset.name.toLowerCase();
+        const searchableText = card.textContent.toLowerCase();
         const category = card.dataset.category;
         
-        const matchesSearch = name.includes(searchTerm);
+        const matchesSearch = searchableText.includes(searchTerm);
         const matchesFilter = currentFilter === 'all' || category === currentFilter;
 
         if (matchesSearch && matchesFilter) {

@@ -4,86 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Activities - Banyu Handika</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="activities-style.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/activities-style.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">Portfolio</div>
-            <ul class="nav-menu">
-                <li><a href="index.html#home" class="nav-link">Home</a></li>
+            <div class="logo">BANYU HANDIKA</div>
+            <ul class="nav-menu" id="primary-navigation">
+                <li><a href="index.html#home" class="nav-link">Beranda</a></li>
                 <li class="nav-item-dropdown">
-                    <a href="index.html#about" class="nav-link">About</a>
+                    <a href="index.html#about" class="nav-link">Tentang</a>
                     <ul class="dropdown-menu">
-                        <li><a href="activities.html" class="dropdown-link">Activities</a></li>
+                        <li><a href="activities.html" class="dropdown-link">Aktivitas</a></li>
                     </ul>
                 </li>
                 <li class="nav-item-dropdown">
-                    <a href="index.html#skills" class="nav-link">Skills</a>
+                    <a href="index.html#skills" class="nav-link">Keahlian</a>
                     <ul class="dropdown-menu">
-                        <li><a href="certification.html" class="dropdown-link">Certificate</a></li>
+                        <li><a href="certification.html" class="dropdown-link">Sertifikat</a></li>
                     </ul>
                 </li>
-                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
-                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="index.html#projects" class="nav-link">Proyek</a></li>
+                <li><a href="index.html#contact" class="nav-link">Kontak</a></li>
             </ul>
-            <div class="hamburger">
+            <button class="hamburger" type="button" aria-label="Buka navigasi" aria-expanded="false" aria-controls="primary-navigation">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
     <section class="activities-page">
-        <!-- Network Elements -->
-        <div class="activities-network-nodes">
-            <div class="activity-node" style="top: 15%; left: 10%;"></div>
-            <div class="activity-node" style="top: 35%; left: 20%;"></div>
-            <div class="activity-node" style="top: 55%; left: 15%;"></div>
-            <div class="activity-node" style="top: 75%; left: 25%;"></div>
-            <div class="activity-node" style="top: 25%; left: 85%;"></div>
-            <div class="activity-node" style="top: 45%; left: 90%;"></div>
-            <div class="activity-node" style="top: 65%; left: 80%;"></div>
-            <div class="activity-node" style="top: 85%; left: 88%;"></div>
-            <div class="data-flow" style="left: 15%; animation-delay: 0s;"></div>
-            <div class="data-flow" style="left: 35%; animation-delay: 1s;"></div>
-            <div class="data-flow" style="left: 55%; animation-delay: 2s;"></div>
-            <div class="data-flow" style="left: 75%; animation-delay: 1.5s;"></div>
-            <div class="data-flow" style="left: 85%; animation-delay: 0.5s;"></div>
-        </div>
-
         <div class="activities-header">
+            <p class="page-kicker">Portfolio / Pengalaman</p>
             <h1>Aktivitas & Pengalaman</h1>
             <p>Kegiatan organisasi, kompetisi, dan pengalaman profesional</p>
             
             <div class="activities-stats">
                 <div class="stat-item">
-                    <span class="stat-number" id="totalActivities">3</span>
-                    <span class="stat-label">Total Activities</span>
+                    <span class="stat-number" id="totalActivities">5</span>
+                    <span class="stat-label">Total Aktivitas</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-number">2</span>
-                    <span class="stat-label">Organizations</span>
+                    <span class="stat-label">Organisasi</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">2025</span>
-                    <span class="stat-label">Latest Year</span>
+                    <span class="stat-number">2026</span>
+                    <span class="stat-label">Tahun Terbaru</span>
                 </div>
             </div>
         </div>
 
         <div class="activities-controls">
             <div class="search-box">
-                <span class="search-icon">🔍</span>
-                <input type="text" class="search-input" id="searchInput" placeholder="Cari aktivitas...">
+                <span class="search-icon" aria-hidden="true"></span>
+                <input type="search" class="search-input" id="searchInput" placeholder="Cari aktivitas..." aria-label="Cari aktivitas">
             </div>
             <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">Semua</button>
-                <button class="filter-btn" data-filter="organization">Organisasi</button>
-                <button class="filter-btn" data-filter="competition">Kompetisi</button>
-                <button class="filter-btn" data-filter="project">Project</button>
+                <button class="filter-btn active" data-filter="all" aria-pressed="true">Semua</button>
+                <button class="filter-btn" data-filter="organization" aria-pressed="false">Organisasi</button>
+                <button class="filter-btn" data-filter="competition" aria-pressed="false">Kompetisi</button>
+                <button class="filter-btn" data-filter="project" aria-pressed="false">Proyek</button>
+                <button class="filter-btn" data-filter="internship" aria-pressed="false">Magang</button>
             </div>
         </div>
 
@@ -92,9 +77,9 @@
                 
                 <!-- Activity 1 -->
                 <div class="activity-card" data-category="organization" data-name="Koordinator Humas dan IT OSIS">
-                    <div class="activity-icon">👥</div>
+                    <div class="activity-icon" aria-hidden="true">01</div>
                     <div class="activity-body">
-                        <div class="activity-badge organization">Organization</div>
+                        <div class="activity-badge organization">Organisasi</div>
                         <h3 class="activity-title">Koordinator Humas dan IT OSIS</h3>
                         <div class="activity-org">OSIS SMK</div>
                         <div class="activity-date">2024 - 2025</div>
@@ -109,9 +94,9 @@
 
                 <!-- Activity 2 -->
                 <div class="activity-card" data-category="competition" data-name="LKS Network Administrator">
-                    <div class="activity-icon">🏆</div>
+                    <div class="activity-icon" aria-hidden="true">02</div>
                     <div class="activity-body">
-                        <div class="activity-badge competition">Competition</div>
+                        <div class="activity-badge competition">Kompetisi</div>
                         <h3 class="activity-title">LKS Network Administrator</h3>
                         <div class="activity-org">Lomba Kompetensi Siswa</div>
                         <div class="activity-date">2024</div>
@@ -126,9 +111,9 @@
 
                 <!-- Activity 3 -->
                 <div class="activity-card" data-category="project" data-name="Lab Network Setup">
-                    <div class="activity-icon">🔧</div>
+                    <div class="activity-icon" aria-hidden="true">03</div>
                     <div class="activity-body">
-                        <div class="activity-badge project">Project</div>
+                        <div class="activity-badge project">Proyek</div>
                         <h3 class="activity-title">Lab Network Setup</h3>
                         <div class="activity-org">Personal Project</div>
                         <div class="activity-date">2024 - Present</div>
@@ -143,12 +128,12 @@
 
                 <!-- Activites 3 - Internship -->
                 <div class="activity-card" data-category="internship" data-name="GMEDIA internship">
-                    <div class="activity-icon">👥</div>
+                    <div class="activity-icon" aria-hidden="true">04</div>
                     <div class="activity-body">
-                        <div class="activity-badge internship">Internship</div>
-                        <h3 class="activity-title">Internship at PT. GMEDIA</h3>
-                        <div class="activity-org">Internship</div>
-                        <div class="activity-date">July 2025 - December 2025</div>
+                        <div class="activity-badge internship">Magang</div>
+                        <h3 class="activity-title">Network Operations Intern</h3>
+                        <div class="activity-org">PT Media Sarana Data (GMEDIA)</div>
+                        <div class="activity-date">Juli–Desember 2025</div>
                         <div class="activity-tags">
                             <span class="activity-tag">Internship</span>
                             <span class="activity-tag">Hands-on</span>
@@ -160,7 +145,7 @@
 
                 <!-- Activites 4 - Lomba NETCOMP -->
                 <div class="activity-card" data-category="competition" data-name="Lomba Nasional Networking">
-                    <div class="activity-icon">🏆</div>
+                    <div class="activity-icon" aria-hidden="true">05</div>
                     <div class="activity-body">
                         <div class="activity-badge competition">Semi-Final</div>
                         <h3 class="activity-title">NetComp 4.0</h3>
@@ -176,26 +161,23 @@
                 </div>
             </div>
 
-            <div class="no-results" id="noResults">
-                <div class="no-results-icon">🔍</div>
+            <div class="no-results" id="noResults" role="status" aria-live="polite">
+                <div class="no-results-icon" aria-hidden="true">—</div>
                 <h3>Tidak ada aktivitas ditemukan</h3>
                 <p>Coba kata kunci atau filter lain</p>
             </div>
 
             <div class="back-section">
-                <a href="index.html" class="back-btn">
-                    ← Kembali ke Home
-                </a>
+                <a href="index.html" class="back-btn">Kembali ke Beranda</a>
             </div>
         </div>
     </section>
 
     <footer class="footer">
-        <p style="font-size:0.8rem; color:#8b949e; border-top:1px solid #30363d; padding-top:20px; display:inline-block;">
-            Rack Unit 42 | Powered by Coffee & Packet Switching<br>
-            © 2026 Banyu Handika. All cables labeled correctly.</p>
+        <p class="page-footer-note">© 2026 Banyu Handika · Network Engineering &amp; Infrastructure</p>
     </footer>
 
-    <script src="activities-script.js"></script>
+    <script type="module" src="./scripts/activities-script.js"></script>
+    <script type="module" src="./src/main.jsx"></script>
 </body>
 </html>

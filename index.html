@@ -22,76 +22,60 @@
     <link rel="dns-prefetch" href="https://formsubmit.co">
     
     <!-- Load main CSS standar (lebih aman daripada critical css inline parsial) -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">Portfolio</div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
+            <div class="logo">BANYU HANDIKA</div>
+            <ul class="nav-menu" id="primary-navigation">
+                <li><a href="#home" class="nav-link">Beranda</a></li>
                 <li class="nav-item-dropdown">
-                    <a href="#about" class="nav-link">About</a>
+                    <a href="#about" class="nav-link">Tentang</a>
                     <ul class="dropdown-menu">
-                        <li><a href="activities.html" class="dropdown-link">Activities</a></li>
+                        <li><a href="activities.html" class="dropdown-link">Aktivitas</a></li>
                     </ul>
                 </li>
                 <li class="nav-item-dropdown">
-                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#skills" class="nav-link">Keahlian</a>
                     <ul class="dropdown-menu">
-                        <li><a href="certification.html" class="dropdown-link">Certificate</a></li>
+                        <li><a href="certification.html" class="dropdown-link">Sertifikat</a></li>
                     </ul>
                 </li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#projects" class="nav-link">Proyek</a></li>
+                <li><a href="#contact" class="nav-link">Kontak</a></li>
             </ul>
-            <div class="hamburger">
+            <button class="hamburger" type="button" aria-label="Buka navigasi" aria-expanded="false" aria-controls="primary-navigation">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
     <main>
         <section id="home" class="hero">
-            <div class="network-grid"></div>
-            <div class="network-nodes">
-                <div class="network-node" style="top:20%;left:15%"></div>
-                <div class="network-node" style="top:40%;left:25%"></div>
-                <div class="network-node" style="top:60%;left:10%"></div>
-                <div class="network-node" style="top:30%;left:85%"></div>
-                <div class="network-node" style="top:70%;left:80%"></div>
-                <div class="network-node" style="top:50%;left:90%"></div>
-                <div class="data-packet" style="top:20%;animation-delay:0s"></div>
-                <div class="data-packet" style="top:40%;animation-delay:2s"></div>
-                <div class="data-packet" style="top:60%;animation-delay:4s"></div>
-                <div class="data-packet" style="top:80%;animation-delay:6s"></div>
-            </div>
-            <div class="floating-shapes">
-                <div class="shape shape-1"></div>
-                <div class="shape shape-2"></div>
-                <div class="shape shape-3"></div>
-                <div class="shape shape-4"></div>
-                <div class="shape shape-5"></div>
-            </div>
             <div class="hero-content">
-                <h1 class="hero-title">Halo, Saya <span class="highlight">Banyu Handika</span></h1>
+                <p class="page-kicker">Portfolio Teknologi &amp; Jaringan</p>
+                <div id="hero-title-root">
+                    <h1 class="hero-title">Halo, Saya <span class="highlight">Banyu Handika</span></h1>
+                </div>
                 <p class="hero-subtitle">Network Engineer & Network Administrator</p>
                 <p class="hero-description">MikroTik Certified Network Associate (MTCNA), MikroTik Certified Routing Engineer (MTCRE)</p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-primary">Hubungi Saya</a>
-                    <a href="Asset/Resume_Banyu_Handika_TJKT.pdf" class="btn btn-secondary" target="_blank" rel="noopener">Download CV</a>
+                    <a href="Asset/Resume_Banyu_Handika_TJKT.pdf" class="btn btn-secondary" target="_blank" rel="noopener">Unduh CV</a>
                 </div>
             </div>
             <div class="hero-image">
                 <picture>
-                    <source srcset="Asset/IMG_0853.JPG.jpeg" type="image/webp">
+                    <source srcset="Asset/IMG_0853.JPG.jpeg" type="image/jpeg">
                     <img 
                         src="Asset/IMG_0853.JPG.jpeg" 
                         alt="Banyu Handika - Network Engineer" 
                         class="profile-photo"
-                        loading="lazy" 
+                        loading="eager"
+                        fetchpriority="high"
                         decoding="async"
                         width="350" 
                         height="350">
@@ -114,54 +98,54 @@
         <section id="skills" class="skills">
             <div class="container">
                 <h2 class="section-title">Keahlian</h2>
-                <div class="skills-categories">
+                <div class="skills-categories skills-compact">
                     <div class="skill-category">
                         <div class="category-header">
-                            <div class="category-icon">🌐</div>
-                            <h3>Networking</h3>
+                            <div class="category-icon" aria-hidden="true">01</div>
+                            <h3>Jaringan</h3>
                         </div>
                         <div class="category-content">
-                            <div class="skill-item"><span class="skill-name">MikroTik RouterOS</span><span class="skill-badge advanced">Advanced</span></div>
-                            <div class="skill-item"><span class="skill-name">Routing & Switching</span><span class="skill-badge advanced">Advanced</span></div>
-                            <div class="skill-item"><span class="skill-name">VLAN Configuration</span><span class="skill-badge advanced">Advanced</span></div>
-                            <div class="skill-item"><span class="skill-name">Firewall & Security</span><span class="skill-badge advanced">Advanced</span></div>
-                            <div class="skill-item"><span class="skill-name">VPN (PPTP, L2TP, IPSec)</span><span class="skill-badge intermediate">Intermediate</span></div>
+                            <div class="skill-item"><span class="skill-name">MikroTik RouterOS</span><span class="skill-badge advanced">Mahir</span></div>
+                            <div class="skill-item"><span class="skill-name">Routing & Switching</span><span class="skill-badge advanced">Mahir</span></div>
+                            <div class="skill-item"><span class="skill-name">VLAN Configuration</span><span class="skill-badge advanced">Mahir</span></div>
+                            <div class="skill-item"><span class="skill-name">Firewall & Security</span><span class="skill-badge advanced">Mahir</span></div>
+                            <div class="skill-item"><span class="skill-name">VPN (PPTP, L2TP, IPSec)</span><span class="skill-badge intermediate">Menengah</span></div>
                         </div>
                     </div>
                     <div class="skill-category">
                         <div class="category-header">
-                            <div class="category-icon">🔧</div>
-                            <h3>Network Hardware</h3>
+                            <div class="category-icon" aria-hidden="true">02</div>
+                            <h3>Perangkat Jaringan</h3>
                         </div>
                         <div class="category-content">
-                            <div class="skill-item"><span class="skill-name">MikroTik RouterOS</span><span class="skill-badge advanced">Advanced</span></div>
-                            <div class="skill-item"><span class="skill-name">Cisco System</span><span class="skill-badge intermediate">Intermediate</span></div>
-                            <div class="skill-item"><span class="skill-name">Ruijie Cloud</span><span class="skill-badge intermediate">Intermediate</span></div>
-                            <div class="skill-item"><span class="skill-name">Server Maintenance</span><span class="skill-badge intermediate">Intermediate</span></div>
+                            <div class="skill-item"><span class="skill-name">MikroTik RouterOS</span><span class="skill-badge advanced">Mahir</span></div>
+                            <div class="skill-item"><span class="skill-name">Cisco System</span><span class="skill-badge intermediate">Menengah</span></div>
+                            <div class="skill-item"><span class="skill-name">Ruijie Cloud</span><span class="skill-badge intermediate">Menengah</span></div>
+                            <div class="skill-item"><span class="skill-name">Server Maintenance</span><span class="skill-badge intermediate">Menengah</span></div>
                         </div>
                     </div>
                     <div class="skill-category">
                         <div class="category-header">
-                            <div class="category-icon">💻</div>
-                            <h3>Operating System</h3>
+                            <div class="category-icon" aria-hidden="true">03</div>
+                            <h3>Sistem Operasi</h3>
                         </div>
                         <div class="category-content">
-                            <div class="skill-item"><span class="skill-name">Windows Server</span><span class="skill-badge advanced">Advanced</span></div>
-                            <div class="skill-item"><span class="skill-name">Linux (Ubuntu, CentOS)</span><span class="skill-badge advanced">Advanced</span></div>
-                            <div class="skill-item"><span class="skill-name">Windows 10/11</span><span class="skill-badge expert">Expert</span></div>
-                            <div class="skill-item"><span class="skill-name">Active Directory</span><span class="skill-badge intermediate">Intermediate</span></div>
+                            <div class="skill-item"><span class="skill-name">Windows Server</span><span class="skill-badge advanced">Mahir</span></div>
+                            <div class="skill-item"><span class="skill-name">Linux (Ubuntu, CentOS)</span><span class="skill-badge advanced">Mahir</span></div>
+                            <div class="skill-item"><span class="skill-name">Windows 10/11</span><span class="skill-badge expert">Ahli</span></div>
+                            <div class="skill-item"><span class="skill-name">Active Directory</span><span class="skill-badge intermediate">Menengah</span></div>
                         </div>
                     </div>
                     <div class="skill-category">
                         <div class="category-header">
-                            <div class="category-icon">🎨</div>
-                            <h3>Web Development</h3>
+                            <div class="category-icon" aria-hidden="true">04</div>
+                            <h3>Pengembangan Web</h3>
                         </div>
                         <div class="category-content">
-                            <div class="skill-item"><span class="skill-name">HTML & CSS</span><span class="skill-badge expert">Expert</span></div>
-                            <div class="skill-item"><span class="skill-name">JavaScript</span><span class="skill-badge advanced">Advanced</span></div>
-                            <div class="skill-item"><span class="skill-name">Responsive Design</span><span class="skill-badge expert">Expert</span></div>
-                            <div class="skill-item"><span class="skill-name">UI/UX Design</span><span class="skill-badge advanced">Advanced</span></div>
+                            <div class="skill-item"><span class="skill-name">HTML & CSS</span><span class="skill-badge expert">Ahli</span></div>
+                            <div class="skill-item"><span class="skill-name">JavaScript</span><span class="skill-badge advanced">Mahir</span></div>
+                            <div class="skill-item"><span class="skill-name">Responsive Design</span><span class="skill-badge expert">Ahli</span></div>
+                            <div class="skill-item"><span class="skill-name">UI/UX Design</span><span class="skill-badge advanced">Mahir</span></div>
                         </div>
                     </div>
                 </div>
@@ -171,10 +155,10 @@
         <section id="projects" class="projects">
             <div class="container">
                 <h2 class="section-title">Projek Saya</h2>
-                <p class="section-subtitle">Beberapa projek yang telah saya kerjakan</p>
+                <p class="section-subtitle">Pilihan pekerjaan dan eksperimen teknis</p>
                 <div class="projects-grid">
                     <div class="project-card">
-                        <div class="project-icon">🌐</div>
+                        <div class="project-icon" aria-hidden="true">01</div>
                         <div class="project-content">
                             <h3>Network Lab Setup</h3>
                             <p>Membangun lab jaringan pribadi dengan MikroTik untuk eksperimen berbagai topologi dan konfigurasi networking</p>
@@ -182,7 +166,7 @@
                         </div>
                     </div>
                     <div class="project-card">
-                        <div class="project-icon">🔒</div>
+                        <div class="project-icon" aria-hidden="true">02</div>
                         <div class="project-content">
                             <h3>Firewall Configuration</h3>
                             <p>Implementasi firewall rules dan security policies untuk melindungi jaringan dari ancaman eksternal</p>
@@ -190,7 +174,7 @@
                         </div>
                     </div>
                     <div class="project-card">
-                        <div class="project-icon">📡</div>
+                        <div class="project-icon" aria-hidden="true">03</div>
                         <div class="project-content">
                             <h3>Wireless Network Design</h3>
                             <p>Perancangan dan konfigurasi wireless network dengan coverage optimal dan keamanan maksimal</p>
@@ -198,7 +182,7 @@
                         </div>
                     </div>
                     <div class="project-card">
-                        <div class="project-icon">💻</div>
+                        <div class="project-icon" aria-hidden="true">04</div>
                         <div class="project-content">
                             <h3>Portfolio Website</h3>
                             <p>Website portfolio pribadi dengan design modern dan animasi networking theme yang interaktif</p>
@@ -242,15 +226,15 @@
                         </div>
                         <div class="contact-items">
                             <a href="mailto:banyujkt@gmail.com" class="contact-item">
-                                <div class="icon-wrapper"><span class="icon">📧</span></div>
+                                <div class="icon-wrapper" aria-hidden="true">01</div>
                                 <div class="contact-details"><span class="contact-label">Email</span><span class="contact-value">banyujkt@gmail.com</span></div>
                             </a>
                             <a href="tel:+6283169635192" class="contact-item">
-                                <div class="icon-wrapper"><span class="icon">📱</span></div>
+                                <div class="icon-wrapper" aria-hidden="true">02</div>
                                 <div class="contact-details"><span class="contact-label">Telepon</span><span class="contact-value">+62 831-6963-5192</span></div>
                             </a>
                             <div class="contact-item">
-                                <div class="icon-wrapper"><span class="icon">📍</span></div>
+                                <div class="icon-wrapper" aria-hidden="true">03</div>
                                 <div class="contact-details"><span class="contact-label">Lokasi</span><span class="contact-value">Indonesia</span></div>
                             </div>
                         </div>
@@ -272,7 +256,7 @@
     </main>
 
     <footer class="footer">
-        <p>Rack Unit 42 | Powered by Coffee & Packet Switching<br>© 2026 Banyu Handika. All cables labeled correctly.</p>
+        <p>© 2026 Banyu Handika · Network Engineering &amp; Infrastructure</p>
     </footer>
 
     <!-- Service Worker Registration -->
@@ -287,7 +271,8 @@
     </script>
 
     <!-- Deferred Scripts -->
-    <script src="mobile-menu.js" defer></script>
+    <script type="module" src="./scripts/mobile-menu.js"></script>
+    <script type="module" src="./src/main.jsx"></script>
     
     <!-- Inline Form Validation -->
     <script>

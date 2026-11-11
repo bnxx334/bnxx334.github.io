@@ -1,11 +1,10 @@
-const CACHE_NAME = 'portfolio-v2';
+const CACHE_NAME = 'portfolio-v5';
 const ASSETS_TO_CACHE = [
     './',
     './index.html',
-    './style.css',
-    './mobile-menu.js',
-    './Asset/IMG_0853.JPG.jpeg',
-    './Asset/Resume_Banyu_Handika_TJKT.pdf'
+    './activities.html',
+    './certification.html',
+    './thanks.html'
 ];
 
 // Install Service Worker & Cache Assets
