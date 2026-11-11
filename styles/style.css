@@ -86,7 +86,7 @@ textarea:focus-visible {
     min-height: var(--nav-height);
     align-items: center;
     justify-content: space-between;
-    gap: 1.5rem;
+    gap: clamp(0.75rem, 2vw, 1.5rem);
 }
 
 .logo {
@@ -96,13 +96,18 @@ textarea:focus-visible {
     font-weight: 800;
     letter-spacing: 0.04em;
     text-decoration: none;
+    white-space: nowrap;
 }
 
 .nav-menu {
     display: flex;
+    flex: 0 1 auto;
     align-items: center;
-    gap: 0.3rem;
+    justify-content: flex-end;
+    gap: clamp(0.05rem, 0.35vw, 0.3rem);
+    margin-left: auto;
     list-style: none;
+    white-space: nowrap;
 }
 
 .nav-item-dropdown {
@@ -120,8 +125,9 @@ textarea:focus-visible {
 }
 
 .nav-link {
-    padding: 0.65rem 0.85rem;
+    padding: 0.6rem clamp(0.4rem, 0.75vw, 0.8rem);
     border-radius: 9px;
+    font-size: clamp(0.79rem, 0.95vw, 0.91rem);
 }
 
 .nav-link:hover,
@@ -1116,6 +1122,22 @@ section {
     }
 }
 
+@media (min-width: 761px) and (max-width: 900px) {
+    .nav-container {
+        gap: 0.65rem;
+    }
+
+    .logo {
+        font-size: 0.9rem;
+        letter-spacing: 0.02em;
+    }
+
+    .nav-link {
+        padding-inline: 0.4rem;
+        font-size: 0.8rem;
+    }
+}
+
 @media (max-width: 760px) {
     :root {
         --nav-height: 66px;
@@ -1161,6 +1183,7 @@ section {
 
     .nav-link {
         padding: 0.75rem 0.8rem;
+        font-size: 0.91rem;
         text-align: left;
     }
 
