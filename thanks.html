@@ -5,74 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terima Kasih - Banyu Handika</title>
     <link rel="stylesheet" href="styles/style.css">
-    <style>
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-    </style>
-    <style>
-        .thanks-page {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            background:
-                radial-gradient(circle at 85% 15%, rgba(37, 99, 235, 0.12), transparent 28%),
-                linear-gradient(135deg, #f8fafc 0%, #f1f5f9 58%, #eaf2ff 100%);
-        }
-
-        .thanks-container {
-            text-align: center;
-            max-width: 600px;
-            background: rgba(255, 255, 255, 0.94);
-            padding: 4rem 3rem;
-            border-radius: 24px;
-            box-shadow: var(--shadow-hover);
-            border: 1px solid #e2e8f0;
-        }
-
-        .thanks-icon {
-            font-size: 5rem;
-            margin-bottom: 2rem;
-            animation: bounce 1s ease;
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-
-        .thanks-container h1 {
-            color: var(--text-light);
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .thanks-container p {
-            color: var(--text-gray);
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 2rem;
-        }
-
-        .thanks-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .countdown {
-            color: var(--highlight-color);
-            font-weight: 600;
-            margin-top: 1rem;
-            font-size: 0.9rem;
-        }
-    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -130,6 +62,7 @@
             }
         }, 1000);
     </script>
+    <script src="scripts/mobile-menu.js" defer></script>
     <script type="module" src="./src/main.jsx"></script>
 </body>
 </html>
