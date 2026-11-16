@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities - Banyu Handika</title>
+  <script type="module" crossorigin src="./assets/activities-KwMtKo_I.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/main-BV_1jaLS.js">
+  <link rel="stylesheet" crossorigin href="./assets/main-DayuB9Il.css">
+  <link rel="stylesheet" crossorigin href="./assets/activities-i1EJqCmh.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Portofolio</div>
+            <ul class="nav-menu" id="primary-navigation">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li class="nav-item-dropdown">
+                    <a href="index.html#about" class="nav-link">About</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="activities.html" class="dropdown-link">Activity</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item-dropdown">
+                    <a href="index.html#skills" class="nav-link">Skill</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="certification.html" class="dropdown-link">Certification</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="hamburger" type="button" aria-label="Buka navigasi" aria-expanded="false" aria-controls="primary-navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="activities-page">
+        <div class="activities-header">
+            <p class="page-kicker">Portfolio / Pengalaman</p>
+            <h1>Aktivitas & Pengalaman</h1>
+            <p>Kegiatan organisasi, kompetisi, dan pengalaman profesional</p>
+            
+            <div class="activities-stats">
+                <div class="stat-item">
+                    <span class="stat-number" id="totalActivities">5</span>
+                    <span class="stat-label">Total Aktivitas</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">2</span>
+                    <span class="stat-label">Organisasi</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">2026</span>
+                    <span class="stat-label">Tahun Terbaru</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="activities-controls">
+            <div class="search-box">
+                <span class="search-icon" aria-hidden="true"></span>
+                <input type="search" class="search-input" id="searchInput" placeholder="Cari aktivitas..." aria-label="Cari aktivitas">
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all" aria-pressed="true">Semua</button>
+                <button class="filter-btn" data-filter="organization" aria-pressed="false">Organisasi</button>
+                <button class="filter-btn" data-filter="competition" aria-pressed="false">Kompetisi</button>
+                <button class="filter-btn" data-filter="project" aria-pressed="false">Proyek</button>
+                <button class="filter-btn" data-filter="internship" aria-pressed="false">Magang</button>
+                <button class="filter-btn" data-filter="internship" aria-pressed="false">Profesional</button>
+            </div>
+        </div>
+
+        <div class="activities-container">
+            <div class="activities-grid" id="activitiesGrid">
+                
+                <!-- Activity 1 -->
+                <div class="activity-card" data-category="organization" data-name="Koordinator Humas dan IT OSIS">
+                    <div class="activity-icon" aria-hidden="true">01</div>
+                    <div class="activity-body">
+                        <div class="activity-badge organization">Organisasi</div>
+                        <h3 class="activity-title">Koordinator Humas dan Teknologi Informasi</h3>
+                        <div class="activity-org">Organisasi Siswa Intra Sekolah - SMK Prestasi Prima</div>
+                        <div class="activity-date">2024 - 2025</div>
+                        <div class="activity-tags">
+                            <span class="activity-tag">Leadership</span>
+                            <span class="activity-tag">IT Management</span>
+                            <span class="activity-tag">Communication</span>
+                        </div>
+                        <p class="activity-desc">Memimpin divisi Humas dan IT dalam mengelola komunikasi sekolah dan infrastruktur teknologi informasi untuk kegiatan OSIS.</p>
+                    </div>
+                </div>
+
+                <!-- Activity 2 -->
+                <div class="activity-card" data-category="competition" data-name="LKS Network Administrator">
+                    <div class="activity-icon" aria-hidden="true">02</div>
+                    <div class="activity-body">
+                        <div class="activity-badge competition">Kompetisi</div>
+                        <h3 class="activity-title">LKS Network Administrator</h3>
+                        <div class="activity-org">Lomba Kompetensi Siswa</div>
+                        <div class="activity-date">2024</div>
+                        <div class="activity-tags">
+                            <span class="activity-tag">Networking</span>
+                            <span class="activity-tag">Competition</span>
+                            <span class="activity-tag">Technical</span>
+                        </div>
+                        <p class="activity-desc">Mengikuti kompetisi Network Administrator tingkat sekolah, menguji kemampuan dalam konfigurasi jaringan dan troubleshooting.</p>
+                    </div>
+                </div>
+
+                <!-- Activity 3 -->
+                <div class="activity-card" data-category="project" data-name="Lab Network Setup">
+                    <div class="activity-icon" aria-hidden="true">03</div>
+                    <div class="activity-body">
+                        <div class="activity-badge project">Homelab Project</div>
+                        <h3 class="activity-title">Homelab Network Setup</h3>
+                        <div class="activity-org">Personal Project</div>
+                        <div class="activity-date">All Of Time</div>
+                        <div class="activity-tags">
+                            <span class="activity-tag">Troubleshooting</span>
+                            <span class="activity-tag">Experimentation</span>
+                            <span class="activity-tag">Planning & Execution</span>
+                        </div>
+                        <p class="activity-desc">Membangun dan mengelola lab jaringan pribadi untuk eksperimen berbagai topologi dan konfigurasi networking menggunakan MikroTik, Linux, Docker, Container</p>
+                    </div>
+                </div>
+
+                <!-- Activites 3 - Internship -->
+                <div class="activity-card" data-category="internship" data-name="GMEDIA internship">
+                    <div class="activity-icon" aria-hidden="true">04</div>
+                    <div class="activity-body">
+                        <div class="activity-badge internship">Magang</div>
+                        <h3 class="activity-title">Network Operations Intern</h3>
+                        <div class="activity-org">PT. Media Sarana Data (GMEDIA)</div>
+                        <div class="activity-date">Juli 2025 - Desember 2025</div>
+                        <div class="activity-tags">
+                            <span class="activity-tag">Internship</span>
+                            <span class="activity-tag">Hands-on</span>
+                            <span class="activity-tag">Network Technician</span>
+                            <span class="activity-tag">Helpdesk</span>
+                            <span class="activity-tag">First Handling</span>
+                            <span class="activity-tag">Troubleshooting</span>
+                        </div>
+                        <p class="activity-desc">Magang di PT. Media Sarana Data, Divisi <i>Network Operations (NetOps)</i> </p>
+                    </div>
+                </div>
+
+                <!-- Activites 4 - Lomba NETCOMP -->
+                <div class="activity-card" data-category="competition" data-name="Lomba Nasional Networking">
+                    <div class="activity-icon" aria-hidden="true">05</div>
+                    <div class="activity-body">
+                        <div class="activity-badge competition">Kompetisi</div>
+                        <h3 class="activity-title">NetComp 4.0</h3>
+                        <div class="activity-org">Lomba Nasional</div>
+                        <div class="activity-date">November 2025 - February 2026</div>
+                        <div class="activity-tags">
+                            <span class="activity-tag">NETCOMP 4.0</span>
+                            <span class="activity-tag">Uneversitas Gadjah Mada</span>
+                            <span class="activity-tag">Kompetisi Nasional</span>
+                        </div>
+                        <p class="activity-desc">Mengikuti perlombaan Nasional Technology NETCOMP 4.0 yang diselenggarakan oleh Universitas Gadjah Mada</p>
+                    </div>
+                </div>
+
+                <!-- Activity 5 -->
+                <div class="activity-card" data-category="organization" data-name="Koordinator Humas dan IT OSIS">
+                    <div class="activity-icon" aria-hidden="true">06</div>
+                    <div class="activity-body">
+                        <div class="activity-badge organization">Profesional</div>
+                        <h3 class="activity-title">NOC HelpDesk at PT. BLiP Integrator Provider</h3>
+                        <div class="activity-org">PT. BLiP Integrator Provider</div>
+                        <div class="activity-date">Juni 2026 - current</div>
+                        <div class="activity-tags">
+                            <span class="activity-tag">Troubleshoot</span>
+                            <span class="activity-tag">First Handling Issue</span>
+                            <span class="activity-tag">Customer Support</span>
+                            <span class="activity-tag">Network Administration</span>
+                        </div>
+                        <p class="activity-desc">Bertanggung jawab dalam memberikan layanan helpdesk dan troubleshooting untuk masalah jaringan dan teknologi informasi di perusahaan.</p>
+                    </div>
+                </div>
+            </div>
+                
+            
+
+            <div class="no-results" id="noResults" role="status" aria-live="polite">
+                <div class="no-results-icon" aria-hidden="true">—</div>
+                <h3>Tidak ada aktivitas ditemukan</h3>
+                <p>Coba kata kunci atau filter lain</p>
+            </div>
+
+            <div class="back-section">
+                <a href="index.html" class="back-btn">Kembali ke Beranda</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p class="page-footer-note">© 2026 Banyu Handika · Network Engineering &amp; Infrastructure</p>
+    </footer>
+
+</body>
+</html>
